@@ -138,7 +138,7 @@ namespace EmpAPI.Controllers
 
                 int userId = int.Parse(token.Issuer);
 
-                string query = @"select Id, Name, Email, Password
+                string query = @"select Id, Name, Email, Password, User_Role
                     from dbo.Users";
                 DataTable table = new DataTable();
                 string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
@@ -163,7 +163,8 @@ namespace EmpAPI.Controllers
                                          Id = Convert.ToInt32(rw["Id"]),
                                          Name = Convert.ToString(rw["Name"]),
                                          Password = Convert.ToString(rw["Password"]),
-                                         Email = Convert.ToString(rw["Email"])
+                                         Email = Convert.ToString(rw["Email"]),
+                                         User_Role = Convert.ToString(rw["User_Role"])
                                      }).ToList();
 
                 var user = convertedList.FirstOrDefault(u => u.Id == userId);

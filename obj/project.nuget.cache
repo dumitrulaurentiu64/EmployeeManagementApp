@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TZT3sQpScvQKA0mChYbv0jl3N1CeZ8XNV/GWepFCyGl5hAoklfslutzBxVOKAoPSELJgyCymx8rE5FZ7GjV13g==",
+  "dgSpecHash": "p0uekD+uS0RBdCjieAz5QszX5BwBGLs6m6btshe4n4+LGv2K72iIuYjMaIwsV+nFcDwRKu96yV+aTQnmr5+p6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Laurentiu\\source\\repos\\EmpAPI\\EmpAPI.csproj",
+  "projectFilePath": "C:\\Users\\Laurentiu\\Desktop\\Aplicatie Diseratie\\EmpAPI\\EmpAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Laurentiu\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",

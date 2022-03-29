@@ -1,4 +1,5 @@
 ﻿using EmpAPI.Models;
+using EmpAPI.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
@@ -10,113 +11,38 @@ namespace EmpAPI.Controllers
     [ApiController]
     public class DepartmentController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
+        private readonly IDepartmentRepository _departmentRepository;
 
-        public DepartmentController(IConfiguration configuration)
+        public DepartmentController(IDepartmentRepository _departmentRepository)
         {
-            _configuration = configuration;
+            this._departmentRepository = _departmentRepository;
         }
 
         [HttpGet]
         public JsonResult Get()
         {
-            string query = @"select DepartmentId, DepartmentName from dbo.Department";
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            SqlDataReader myReader;
-
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-
+            List<Department> table = _departmentRepository.GetAll();
             return new JsonResult(table);
         }
 
         [HttpPost]
         public JsonResult Post(Department dep)
         {
-            string query = @"insert into dbo.Department values ('" + dep.DepartmentName + @"')";
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            SqlDataReader myReader;
-
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-
-            return new JsonResult("Added succesfully");
+            _departmentRepository.Insert(dep);
+            return new JsonResult(dep);
         }
 
         [HttpPut]
         public JsonResult Put(Department dep)
         {
-            string query = @"
-                update dbo.Department set 
-                DepartmentName = '" + dep.DepartmentName + @"'
-                where DepartmentId = " + dep.DepartmentId + @"
-                ";
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            SqlDataReader myReader;
-
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-
-            return new JsonResult("Updated succesfully");
+            _departmentRepository.Update(dep);
+            return new JsonResult(dep);
         }
 
         [HttpDelete("{id}")]
         public JsonResult Delete(int id)
         {
-            string query = @"
-                delete from dbo.Department
-                where DepartmentId = " + id + @"
-                ";
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            SqlDataReader myReader;
-
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-
+            _departmentRepository.Delete(id);
             return new JsonResult("Deleted succesfully");
         }
     }

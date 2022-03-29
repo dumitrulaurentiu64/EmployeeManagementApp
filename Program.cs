@@ -1,4 +1,5 @@
 using EmpAPI.Helpers;
+using EmpAPI.Repository;
 using Microsoft.Extensions.FileProviders;
 using Newtonsoft.Json.Serialization;
 
@@ -20,6 +21,8 @@ builder.Services.AddControllersWithViews()
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<JwtService>();
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 

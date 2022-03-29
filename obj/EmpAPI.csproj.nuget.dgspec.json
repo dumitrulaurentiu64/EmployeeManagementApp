@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Laurentiu\\source\\repos\\EmpAPI\\EmpAPI.csproj": {}
+    "C:\\Users\\Laurentiu\\Desktop\\Aplicatie Diseratie\\EmpAPI\\EmpAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Laurentiu\\source\\repos\\EmpAPI\\EmpAPI.csproj": {
+    "C:\\Users\\Laurentiu\\Desktop\\Aplicatie Diseratie\\EmpAPI\\EmpAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Laurentiu\\source\\repos\\EmpAPI\\EmpAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Laurentiu\\Desktop\\Aplicatie Diseratie\\EmpAPI\\EmpAPI.csproj",
         "projectName": "EmpAPI",
-        "projectPath": "C:\\Users\\Laurentiu\\source\\repos\\EmpAPI\\EmpAPI.csproj",
+        "projectPath": "C:\\Users\\Laurentiu\\Desktop\\Aplicatie Diseratie\\EmpAPI\\EmpAPI.csproj",
         "packagesPath": "C:\\Users\\Laurentiu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Laurentiu\\source\\repos\\EmpAPI\\obj\\",
+        "outputPath": "C:\\Users\\Laurentiu\\Desktop\\Aplicatie Diseratie\\EmpAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
