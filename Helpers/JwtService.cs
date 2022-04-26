@@ -6,10 +6,16 @@ namespace EmpAPI.Helpers
 {
     public class JwtService
     {
-        private string secureKey = "this is a complex secure key";
+        private readonly IConfiguration _configuration;
+
+        public JwtService(IConfiguration _configuration)
+        {
+            this._configuration = _configuration;
+        }
+
         public string Generate(int? id)
         {
-            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secureKey));
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetConnectionString("EmployeeAppCon")));
             var credentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256Signature);
             var header = new JwtHeader(credentials);
 
@@ -21,7 +27,7 @@ namespace EmpAPI.Helpers
         public JwtSecurityToken Verify(string jwt)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(secureKey);
+            var key = Encoding.ASCII.GetBytes(_configuration.GetConnectionString("EmployeeAppCon"));
             tokenHandler.ValidateToken(jwt, new TokenValidationParameters
             {
                 IssuerSigningKey = new SymmetricSecurityKey(key),

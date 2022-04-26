@@ -19,9 +19,9 @@ namespace EmpAPI.Repository
             this.db.Execute("DELETE FROM Employee WHERE EmployeeId = @Id", new { id });
         }
 
-        public Employee Find()
+        public Employee Find(int id)
         {
-            throw new NotImplementedException();
+            return this.db.Query<Employee>("SELECT * FROM employees where EmployeeId = @Id", new { id }).SingleOrDefault();
         }
 
         public List<Employee> GetAll()

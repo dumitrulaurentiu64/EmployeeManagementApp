@@ -1,9 +1,16 @@
 using EmpAPI.Helpers;
+using EmpAPI.Models;
 using EmpAPI.Repository;
+using EmpAPI.Services;
 using Microsoft.Extensions.FileProviders;
 using Newtonsoft.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var emailConfig = builder.Configuration
+        .GetSection("EmailConfiguration")
+        .Get<EmailConfiguration>();
+builder.Services.AddSingleton(emailConfig);
 
 // Add services to the container.
 //builder.Services.AddCors(p => p.AddPolicy("AllowOrigin", builder =>
@@ -19,10 +26,15 @@ builder.Services.AddControllersWithViews()
         .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver
         = new DefaultContractResolver());
 
+
+builder.Services.AddSingleton<IEmailService, EmailService>();
+
+
 builder.Services.AddControllers();
 builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 

@@ -27,6 +27,13 @@ namespace EmpAPI.Controllers
             return new JsonResult(table);
         }
 
+        [HttpGet("{id}")]
+        public JsonResult Find(int id)
+        {
+            Employee emp = _employeeRepository.Find(id);
+            return new JsonResult(emp);
+        }
+
         [HttpPost]
         public JsonResult Post(Employee emp)
         {

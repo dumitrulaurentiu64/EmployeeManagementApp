@@ -1,6 +1,8 @@
 ﻿using EmpAPI.Dtos;
 using EmpAPI.Helpers;
 using EmpAPI.Models;
+using EmpAPI.Repository;
+using EmpAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Data.SqlClient;
@@ -13,100 +15,29 @@ namespace EmpAPI.Controllers
     [ApiController]
     public class AuthController : Controller
     {
-
+        private readonly IAuthRepository _authRepository;
         private JwtService _jwtService;
-        private readonly IConfiguration _configuration;
+        private IEmailService _emailService;
 
-        public AuthController(IConfiguration configuration, JwtService jwtService)
+        public AuthController(IAuthRepository authRepository, JwtService jwtService, IEmailService emailService)
         {
-            _configuration = configuration;
+            _authRepository = authRepository;
             _jwtService = jwtService;
+            _emailService = emailService;
         }
         [HttpPost("register")]
         public IActionResult Register(RegisterDto dto)
         {
-            ////////////////////////////////////
-            var user = new User
-            {
-                Name = dto.Name,
-                Email = dto.Email,
-                Password = BCrypt.Net.BCrypt.HashPassword(dto.Password)
-            };
-
-            string query = @"
-                                insert into dbo.Users
-                                (Name,Email,Password)                           
-                                values 
-                                (
-                                    '" + user.Name + @"'
-                                    ,'" + user.Email + @"'
-                                    ,'" + user.Password + @"'
-                                )
-                                ";
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            SqlDataReader myReader;
-
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
+            User user = _authRepository.Register(dto);
 
             return Created("success", user);
-
-            ///////////////////////////////////
-
-
-            //return Created("success", _repository.Create(user));
-
-            /////////////////////////////////////////////
         }
-
 
         [HttpPost("login")]
         public IActionResult Login(LoginDto dto)
         {
-            /////////////////////////
-            string query = @"select Id, Name, Email, Password
-                    from dbo.Users";
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            SqlDataReader myReader;
+            User? user = _authRepository.Login(dto);
 
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-
-            var convertedList = (from rw in table.AsEnumerable()
-                                 select new User()
-                                 {
-                                     Id = Convert.ToInt32(rw["Id"]),
-                                     Name = Convert.ToString(rw["Name"]),
-                                     Password = Convert.ToString(rw["Password"]),
-                                     Email = Convert.ToString(rw["Email"])
-                                 }).ToList();
-
-            var user = convertedList.FirstOrDefault(u => u.Email == dto.Email);
-            /////////////////////////
-            //var user = _repository.GetByEmail(dto.Email);
-            ////////////////////////////
             if (user == null) return BadRequest(new { message = "Invalid Credentials" });
 
             if (!BCrypt.Net.BCrypt.Verify(dto.Password, user.Password))
@@ -138,39 +69,8 @@ namespace EmpAPI.Controllers
 
                 int userId = int.Parse(token.Issuer);
 
-                string query = @"select Id, Name, Email, Password, User_Role
-                    from dbo.Users";
-                DataTable table = new DataTable();
-                string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-                SqlDataReader myReader;
+                User? user = _authRepository.GetUser(userId);
 
-                using (SqlConnection myCon = new SqlConnection(sqlDataSource))
-                {
-                    myCon.Open();
-                    using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                    {
-                        myReader = myCommand.ExecuteReader();
-                        table.Load(myReader);
-
-                        myReader.Close();
-                        myCon.Close();
-                    }
-                }
-
-                var convertedList = (from rw in table.AsEnumerable()
-                                     select new User()
-                                     {
-                                         Id = Convert.ToInt32(rw["Id"]),
-                                         Name = Convert.ToString(rw["Name"]),
-                                         Password = Convert.ToString(rw["Password"]),
-                                         Email = Convert.ToString(rw["Email"]),
-                                         User_Role = Convert.ToString(rw["User_Role"])
-                                     }).ToList();
-
-                var user = convertedList.FirstOrDefault(u => u.Id == userId);
-                ///////////////////
-                //var user = _repository.GetById(userId);
-                //////////////////////////
                 return Ok(user);
             }
             catch (Exception)
@@ -184,11 +84,52 @@ namespace EmpAPI.Controllers
         {
             Response.Cookies.Delete("jwt");
 
+            return Ok(new
+            {
+                message = "success"
+            });
+        }
+
+        [HttpPut("changepass")]
+        public IActionResult ChangePass(PassChangeDto dto)
+        {
+            if (dto.Email != null && dto.NewPassword != null)
+            {
+                try
+                {
+                    _authRepository.ChangePassword(dto.Email, dto.NewPassword);
+                }
+                catch (Exception)
+                {
+                    return BadRequest(new
+                    {
+                        message = "Failed to change password!"
+                    });
+                }
+                return Ok(new
+                {
+                    message = "success"
+                });
+            }
+            return BadRequest(new
+            {
+                message = "Failed to change password due to invalid values!!"
+            });
+        }
+
+
+
+        [HttpGet("sendemail")]
+        public IActionResult SendEmail()
+        {
+            var message = new Message(new string[] { "dumitrulaurentiu32@gmail.com" }, "Test email", "This is the content from our email.");
+            _emailService.SendEmail(message);
 
             return Ok(new
             {
                 message = "success"
             });
         }
+
     }
 }

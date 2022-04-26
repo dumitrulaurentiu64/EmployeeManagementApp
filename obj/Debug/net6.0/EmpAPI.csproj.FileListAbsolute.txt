@@ -84,3 +84,7 @@ C:\Users\Laurentiu\Desktop\Aplicatie Diseratie\EmpAPI\obj\Debug\net6.0\EmpAPI.dl
 C:\Users\Laurentiu\Desktop\Aplicatie Diseratie\EmpAPI\obj\Debug\net6.0\ref\EmpAPI.dll
 C:\Users\Laurentiu\Desktop\Aplicatie Diseratie\EmpAPI\obj\Debug\net6.0\EmpAPI.pdb
 C:\Users\Laurentiu\Desktop\Aplicatie Diseratie\EmpAPI\obj\Debug\net6.0\EmpAPI.genruntimeconfig.cache
+C:\Users\Laurentiu\Desktop\Aplicatie Diseratie\EmpAPI\bin\Debug\net6.0\MailKit.dll
+C:\Users\Laurentiu\Desktop\Aplicatie Diseratie\EmpAPI\bin\Debug\net6.0\MimeKit.dll
+C:\Users\Laurentiu\Desktop\Aplicatie Diseratie\EmpAPI\bin\Debug\net6.0\NETCore.MailKit.dll
+C:\Users\Laurentiu\Desktop\Aplicatie Diseratie\EmpAPI\bin\Debug\net6.0\BouncyCastle.Crypto.dll
