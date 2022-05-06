@@ -31,7 +31,7 @@ namespace EmpAPI.Repository
 
         public Employee Insert(Employee employee)
         {
-            string sql = "INSERT INTO Employee (EmployeeName, Department, DateOfJoining, PhotoFileName) VALUES (@EmployeeName, @Department, @DateOfJoining, @PhotoFileName); " +
+            string sql = "INSERT INTO Employee (Name, Lastname, Position, Department, DateOfJoining, PhotoFileName, BaseSalary, Increase, GrossPrizes, Deductions) VALUES (@Name, @Lastname, @Position, @Department, @DateOfJoining, @PhotoFileName, @BaseSalary, @Increase, @GrossPrizes, @Deductions); " +
                          "SELECT CAST(SCOPE_IDENTITY() as int)";
             var id = this.db.Query<int>(sql, employee).Single();
             employee.EmployeeId = id;
@@ -42,10 +42,16 @@ namespace EmpAPI.Repository
         {
             string sql =
                "UPDATE Employee " +
-               "SET EmployeeName = @EmployeeName, " +
+               "SET Name = @Name, " +
+               "Lastname = @Lastname, " +
+               "Position = @Position, " +
                "Department = @Department, " +
                "DateOfJoining = @DateOfJoining, " +
-               "PhotoFileName = @PhotoFileName " +
+               "PhotoFileName = @PhotoFileName, " +
+               "BaseSalary = @BaseSalary, " +
+               "Increase = @Increase, " +
+               "GrossPrizes = @GrossPrizes, " +
+               "Deductions = @Deductions " +
                "WHERE EmployeeId = @EmployeeId";
             this.db.Execute(sql, employee);
             return employee;

@@ -2,44 +2,23 @@
 {
     public class Employee
     {
-        private int? employeeId;
+        public int? EmployeeId { get; set; }
+        public string? Name { get; set; }
+        public string? Lastname { get; set; }
+        public string? Position { get; set; }
+        public string? Department { get; set; }
+        public string? DateOfJoining { get; set; }
+        public string? PhotoFileName { get; set; }
+        public int? BaseSalary { get; set; }
+        public int? Increase { get; set; }
+        public int? GrossPrizes { get; set; }
+        public int? GrossTotal { get; set; }
+        public int? TaxableGross { get; set; }
+        public int? CAS { get; set; }
+        public int? CASS { get; set; }
+        public int? Tax { get; set; }
+        public int? Deductions { get; set; }
+        public int? NetSalary { get; set; }
 
-        public int? EmployeeId
-        {
-            get { return employeeId; }
-            set { employeeId = value; }
-        }
-
-        private string employeeName;
-
-        public string EmployeeName
-        {
-            get { return employeeName; }
-            set { employeeName = value; }
-        }
-
-        private string department;
-
-        public string Department
-        {
-            get { return department; }
-            set { department = value; }
-        }
-
-        private string dateOfJoining;
-
-        public string DateOfJoining
-        {
-            get { return dateOfJoining; }
-            set { dateOfJoining = value; }
-        }
-
-        private string photoFileName;
-
-        public string PhotoFileName
-        {
-            get { return photoFileName; }
-            set { photoFileName = value; }
-        }
     }
 }

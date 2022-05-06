@@ -1,0 +1,157 @@
+  create table Employee (
+	EmployeeId int Primary Key identity(1,1),
+	Lastname varchar(50),
+	Surname varchar(50),
+	Position varchar(50),
+	Department varchar(50),
+	DataOfJoining date,
+	PhotoFileName varchar(50),
+	BaseSalary int,
+	Increase int default 0,
+	GrossPrizes int,
+	GrossTotal int,
+	Taxable_Gross int,
+	CAS int,
+	CASS int,
+	Tax int,
+	Deductions int default 0,
+	NetSalary int
+)
+
+create table Taxes(
+Tax integer default 10,
+CAS integer default 25,
+CASS integer default 10,
+Pass varchar(25)
+);
+
+CREATE TRIGGER CalculateSalary ON Employee
+	FOR INSERT, UPDATE
+AS
+	declare @GrossTotalVar integer;
+	declare @TaxableGrossVar integer;
+	declare @TaxVar integer;
+	declare @CasVar integer;
+	declare @CassVar integer;
+	declare @NetSalaryVar integer;
+
+	declare @BaseSalaryVar integer;
+	declare @IncreaseVar integer;
+	declare @GrossPrizesVar integer;
+	declare @DeductionsVar integer;
+
+	declare @TaxPercentage integer;
+	declare @CasPercentage integer;
+	declare @CassPercentage integer;
+ 
+BEGIN
+	SET @TaxPercentage = (select Tax from dbo.Taxes);
+	SET @CasPercentage = (select CAS from dbo.Taxes);
+	SET @CassPercentage = (select CASS from dbo.Taxes);
+
+	SET @BaseSalaryVar = (select i.BaseSalary from inserted i);
+	SET @IncreaseVar = (select i.Increase from inserted i);
+	SET @GrossPrizesVar = (select i.GrossPrizes from inserted i);
+	SET @DeductionsVar = (select i.Deductions from inserted i);
+
+	SET @GrossTotalVar = @BaseSalaryVar + @BaseSalaryVar * @IncreaseVar/100 + @GrossPrizesVar;
+	SET @CasVar = @GrossTotalVar * @CasPercentage/100;
+	SET @CassVar = @GrossTotalVar * @CassPercentage/100;
+	SET @TaxableGrossVar = @GrossTotalVar - @CasVar - @CassVar;
+	SET @TaxVar = @TaxableGrossVar * @TaxPercentage/100;
+	SET @NetSalaryVar = @GrossTotalVar - @TaxVar - @CasVar - @CassVar - @DeductionsVar;
+
+	update Employee
+	set Tax=@TaxVar
+	where EmployeeId=(select i.EmployeeId from inserted i);
+
+	update Employee
+	set CAS=@CasVar
+	where EmployeeId=(select i.EmployeeId from inserted i);
+
+	update Employee
+	set CASS=@CassVar
+	where EmployeeId=(select i.EmployeeId from inserted i);
+
+	update Employee
+	set Gross_Total=@GrossTotalVar
+	where EmployeeId=(select i.EmployeeId from inserted i);
+
+	update Employee
+	set Taxable_Gross=@TaxableGrossVar
+	where EmployeeId=(select i.EmployeeId from inserted i);
+
+	update Employee
+	set Net_Salary=@NetSalaryVar
+	where EmployeeId=(select i.EmployeeId from inserted i);
+
+END
+
+
+CREATE TRIGGER [dbo].[calcNewSalary] ON [dbo].[Taxes]
+	FOR INSERT, UPDATE
+AS
+
+	declare @IdVar integer;
+	declare @TaxPercentage integer;
+
+BEGIN
+
+SET @TaxPercentage = (select tax from dbo.Taxes);
+
+DECLARE emp_cursor CURSOR
+    FOR Select EmployeeId from Employee;
+
+OPEN emp_cursor;
+
+FETCH NEXT FROM emp_cursor INTO @IdVar;
+
+WHILE @@FETCH_STATUS = 0  
+    BEGIN
+		PRINT @IdVar;
+		UPDATE Employee
+		SET Tax = TaxableGross * @TaxPercentage/100
+		WHERE EmployeeId = @IdVar; 
+        FETCH NEXT FROM emp_cursor INTO @IdVar;  
+    END;
+
+CLOSE emp_cursor;
+DEALLOCATE emp_cursor;
+
+END
+
+CREATE VIEW employees
+AS
+SELECT 
+	EmployeeId,
+    Name,
+	Lastname,
+	Position,
+    Department,
+	convert(varchar(10),DateOfJoining,120) as DateOfJoining,
+    PhotoFileName,
+	BaseSalary,
+	Increase,
+	GrossPrizes,
+	GrossTotal,
+	TaxableGross,
+	CAS,
+	CASS,
+	Tax,
+	Deductions,
+	NetSalary
+FROM Employee
+GO
+
+
+INSERT INTO Employee (Name, Lastname, Position, Department, DateOfJoining, PhotoFileName, BaseSalary, Increase, GrossPrizes, Deductions )
+ VALUES ('Laurentiu', 'Dumitru', 'Programator', 'IT', '2020-08-01', 'anonymous.png', 150000, 10, 0, 0);
+
+ INSERT INTO Employee (Name, Lastname, Position, Department, DateOfJoining, PhotoFileName, BaseSalary, Increase, GrossPrizes, Deductions )
+ VALUES ('George', 'Sustac', 'Programator', 'IT', '2020-08-01', 'anonymous.png', 170000, 10, 0, 0);
+
+ INSERT INTO Employee (Name, Lastname, Position, Department, DateOfJoining, PhotoFileName, BaseSalary, Increase, GrossPrizes, Deductions )
+ VALUES ('Valentin', 'Teodor', 'Programator', 'IT', '2020-08-01', 'anonymous.png', 130000, 10, 0, 0);
+
+ INSERT INTO Employee (Name, Lastname, Position, Department, DateOfJoining, PhotoFileName, BaseSalary, Increase, GrossPrizes, Deductions )
+ VALUES ('Ionut', 'Badea', 'Programator', 'IT', '2020-08-01', 'anonymous.png', 200000, 10, 0, 0);
