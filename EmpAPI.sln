@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpAPI", "EmpAPI.csproj", "{425C5E07-4BC4-44D1-B956-FC78EA2D2C5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmpAPI", "EmpAPI.csproj", "{425C5E07-4BC4-44D1-B956-FC78EA2D2C5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpReports", "..\EmpReports\EmpReports.csproj", "{FE718C77-9BE2-4096-A585-7BB89C68E3DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{425C5E07-4BC4-44D1-B956-FC78EA2D2C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{425C5E07-4BC4-44D1-B956-FC78EA2D2C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{425C5E07-4BC4-44D1-B956-FC78EA2D2C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE718C77-9BE2-4096-A585-7BB89C68E3DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE718C77-9BE2-4096-A585-7BB89C68E3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE718C77-9BE2-4096-A585-7BB89C68E3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE718C77-9BE2-4096-A585-7BB89C68E3DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

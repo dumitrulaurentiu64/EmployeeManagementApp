@@ -10,7 +10,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "fe718c77-9be2-4096-a585-7bb89c68e3db": {
+      "ProjectGuid": "fe718c77-9be2-4096-a585-7bb89c68e3db",
+      "DisplayName": "EmpReports",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "VyzvCOk1H0u4ZH/JoajrG5FUHfOjTdNr/M7wakA7NKAA8uCh5mzEPKAQVHs/K+iNP+S4z8HcVTH4y0iRwb0LZQ==",
+  "dgSpecHash": "si7p1BXLBfbMRDj5v5lQVrTNz+aazoYT89avhfUjEf7Evks9B+M/Vfo77IdNlWXPivtRTM9fL7YFrX8R0J5CFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Laurentiu\\Desktop\\Aplicatie Diseratie\\EmpAPI\\EmpAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\aspnetcore.reporting\\2.1.0\\aspnetcore.reporting.2.1.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\aspnetcore.reportingservices\\2.1.0\\aspnetcore.reportingservices.2.1.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\mailkit\\2.6.0\\mailkit.2.6.0.nupkg.sha512",
@@ -11,8 +13,8 @@
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
-    "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.1\\microsoft.aspnetcore.jsonpatch.6.0.1.nupkg.sha512",
-    "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.1\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.1.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.4\\microsoft.aspnetcore.jsonpatch.6.0.4.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.4\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.4.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.2.0\\microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",
@@ -26,11 +28,14 @@
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.identitymodel.logging\\6.15.1\\microsoft.identitymodel.logging.6.15.1.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.15.1\\microsoft.identitymodel.tokens.6.15.1.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
-    "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.reportingservices.reportviewercontrol.webforms\\150.1484.0\\microsoft.reportingservices.reportviewercontrol.webforms.150.1484.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.sqlserver.types\\14.0.314.76\\microsoft.sqlserver.types.14.0.314.76.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\mimekit\\2.6.0\\mimekit.2.6.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\netcore.mailkit\\2.0.3\\netcore.mailkit.2.0.3.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
@@ -41,6 +46,7 @@
     "C:\\Users\\Laurentiu\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\runtime.native.system.io.compression\\4.3.0\\runtime.native.system.io.compression.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\runtime.native.system.net.http\\4.3.0\\runtime.native.system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\runtime.native.system.net.security\\4.3.0\\runtime.native.system.net.security.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\runtime.native.system.security.cryptography.apple\\4.3.0\\runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
@@ -61,6 +67,7 @@
     "C:\\Users\\Laurentiu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.codedom\\4.5.0\\system.codedom.4.5.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
@@ -68,11 +75,13 @@
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.diagnostics.tracing\\4.3.0\\system.diagnostics.tracing.4.3.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.globalization.calendars\\4.3.0\\system.globalization.calendars.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.globalization.extensions\\4.3.0\\system.globalization.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.15.1\\system.identitymodel.tokens.jwt.6.15.1.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.io.compression\\4.3.0\\system.io.compression.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
@@ -80,7 +89,9 @@
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.net.security\\4.3.2\\system.net.security.4.3.2.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.private.servicemodel\\4.5.3\\system.private.servicemodel.4.5.3.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.reflection.dispatchproxy\\4.5.0\\system.reflection.dispatchproxy.4.5.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
@@ -91,7 +102,7 @@
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.runtime.numerics\\4.3.0\\system.runtime.numerics.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.runtime.serialization.primitives\\4.3.0\\system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
-    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.claims\\4.3.0\\system.security.claims.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.cryptography.algorithms\\4.3.0\\system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
@@ -100,15 +111,50 @@
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.cryptography.openssl\\4.3.0\\system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.cryptography.primitives\\4.3.0\\system.security.cryptography.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.cryptography.x509certificates\\4.3.0\\system.security.cryptography.x509certificates.4.3.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.principal\\4.3.0\\system.security.principal.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.servicemodel.http\\4.5.3\\system.servicemodel.http.4.5.3.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.servicemodel.primitives\\4.5.3\\system.servicemodel.primitives.4.5.3.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.text.encoding.codepages\\4.3.0\\system.text.encoding.codepages.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\Laurentiu\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512"
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512",
+    "C:\\Users\\Laurentiu\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Microsoft.ReportingServices.ReportViewerControl.WebForms 150.1484.0 depends on Microsoft.SqlServer.Types (>= 14.0.0) but Microsoft.SqlServer.Types 14.0.0 was not found. An approximate best match of Microsoft.SqlServer.Types 14.0.314.76 was resolved.",
+      "libraryId": "Microsoft.SqlServer.Types",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.ReportingServices.ReportViewerControl.WebForms 150.1484.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.ReportingServices.ReportViewerControl.WebForms",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.SqlServer.Types 14.0.314.76' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.SqlServer.Types",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

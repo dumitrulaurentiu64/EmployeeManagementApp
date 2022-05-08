@@ -4,8 +4,6 @@ using EmpAPI.Models;
 using EmpAPI.Repository;
 using EmpAPI.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using System.Data.SqlClient;
 
 
 namespace EmpAPI.Controllers
@@ -17,20 +15,11 @@ namespace EmpAPI.Controllers
     {
         private readonly IAuthRepository _authRepository;
         private JwtService _jwtService;
-        private IEmailService _emailService;
 
-        public AuthController(IAuthRepository authRepository, JwtService jwtService, IEmailService emailService)
+        public AuthController(IAuthRepository authRepository, JwtService jwtService)
         {
             _authRepository = authRepository;
             _jwtService = jwtService;
-            _emailService = emailService;
-        }
-        [HttpPost("register")]
-        public IActionResult Register(RegisterDto dto)
-        {
-            User user = _authRepository.Register(dto);
-
-            return Created("success", user);
         }
 
         [HttpPost("login")]
@@ -116,20 +105,5 @@ namespace EmpAPI.Controllers
                 message = "Failed to change password due to invalid values!!"
             });
         }
-
-
-
-        [HttpGet("sendemail")]
-        public IActionResult SendEmail()
-        {
-            var message = new Message(new string[] { "dumitrulaurentiu32@gmail.com" }, "Test email", "This is the content from our email.");
-            _emailService.SendEmail(message);
-
-            return Ok(new
-            {
-                message = "success"
-            });
-        }
-
     }
 }

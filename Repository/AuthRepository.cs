@@ -41,20 +41,18 @@ namespace EmpAPI.Repository
 
             return user;
         }
-        public User Register(RegisterDto dto)
+        public void Register(RegisterDto dto, int parentId)
         {
             var user = new User
             {
-                Name = dto.Name,
+                Id = parentId,
+                Firstname = dto.Firstname,
                 Email = dto.Email,
                 Password = BCrypt.Net.BCrypt.HashPassword(dto.Password)
             };
 
-            string sql = "INSERT INTO Users (Name, Email, Password) VALUES (@Name, @Email, @Password);" +
-                         "SELECT (Name, Email, Password) from Users where Email = @Email;";
-            var id = this.db.Query<int>(sql, user).Single();
-
-            return user;
+            string sql = "INSERT INTO Users (Id, Firstname, Email, Password) VALUES (@Id, @Firstname, @Email, @Password);";
+            this.db.Query<int>(sql, user);
         }
     }
 }

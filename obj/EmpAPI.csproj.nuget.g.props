@@ -19,5 +19,7 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\Laurentiu\.nuget\packages\microsoft.extensions.apidescription.server\3.0.0</PkgMicrosoft_Extensions_ApiDescription_Server>
+    <PkgMicrosoft_SqlServer_Types Condition=" '$(PkgMicrosoft_SqlServer_Types)' == '' ">C:\Users\Laurentiu\.nuget\packages\microsoft.sqlserver.types\14.0.314.76</PkgMicrosoft_SqlServer_Types>
+    <PkgMicrosoft_ReportingServices_ReportViewerControl_WebForms Condition=" '$(PkgMicrosoft_ReportingServices_ReportViewerControl_WebForms)' == '' ">C:\Users\Laurentiu\.nuget\packages\microsoft.reportingservices.reportviewercontrol.webforms\150.1484.0</PkgMicrosoft_ReportingServices_ReportViewerControl_WebForms>
   </PropertyGroup>
 </Project>

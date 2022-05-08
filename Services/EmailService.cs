@@ -1,4 +1,6 @@
-﻿using EmpAPI.Models;
+﻿using EmpAPI.Dtos;
+using EmpAPI.Models;
+using EmpAPI.Repository;
 using MailKit.Net.Smtp;
 using MimeKit;
 
@@ -7,9 +9,11 @@ namespace EmpAPI.Services
     public class EmailService : IEmailService
     {
         private readonly EmailConfiguration _emailConfig;
-        public EmailService(EmailConfiguration emailConfig)
+        private readonly IAuthRepository _authRepository;
+        public EmailService(EmailConfiguration emailConfig, IAuthRepository authRepository)
         {
             _emailConfig = emailConfig;
+            _authRepository = authRepository;
         }
 
         public void SendEmail(Message message)
@@ -49,6 +53,40 @@ namespace EmpAPI.Services
                     client.Dispose();
                 }
             }
+        }
+
+        public void CreateAccount(string email, string firstname, int parentId)
+        {
+            // Create Random Password
+            string password = RandomString(10);
+
+            // Create Account
+            RegisterDto registerDto = new RegisterDto
+            {
+                Email = email,
+                Firstname = firstname,
+                Password = password
+            };
+            _authRepository.Register(registerDto, parentId);
+
+            // Send Email
+            var message = new Message(new string[] { "dumitrulaurentiu32@gmail.com" }, "Account creation",
+                "Hello " + firstname + ",\n \n" +
+                "Your account was succesfully created. \n " +
+                "You can now login with the following credentials: \n" +
+                "Email:" + registerDto.Email + "\n" +
+                "Password:" + registerDto.Password + "\n" +
+                "You can change your password via profile page.");
+            SendEmail(message);
+        }
+
+        public string RandomString(int length)
+        {
+            Random random = new Random();
+
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
         }
     }
 }

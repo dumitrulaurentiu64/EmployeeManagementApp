@@ -1,9 +1,9 @@
-﻿using EmpAPI.Models;
+﻿using EmpAPI.Helpers;
+using EmpAPI.Models;
 using EmpAPI.Repository;
-using Microsoft.AspNetCore.Http;
+using EmpAPI.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using System.Data.SqlClient;
+
 
 namespace EmpAPI.Controllers
 {
@@ -13,11 +13,14 @@ namespace EmpAPI.Controllers
     {
         private readonly IWebHostEnvironment _env;
         private readonly IEmployeeRepository _employeeRepository;
+        private readonly IEmailService _emailService;
 
-        public EmployeeController(IWebHostEnvironment env, IEmployeeRepository employeeRepository)
+        public EmployeeController(IWebHostEnvironment env, IEmployeeRepository employeeRepository, IEmailService emailService)
         {
             _env = env;
-            this._employeeRepository = employeeRepository;
+            _employeeRepository = employeeRepository;
+            _emailService = emailService;
+
         }
 
         [HttpGet]
@@ -34,11 +37,11 @@ namespace EmpAPI.Controllers
             return new JsonResult(emp);
         }
 
-        [HttpPost]
-        public JsonResult Post(Employee emp)
+        [HttpPost("{email}")]
+        public JsonResult Post(Employee emp, string email)
         {
-
-            _employeeRepository.Insert(emp);
+            emp = _employeeRepository.Insert(emp);
+            _emailService.CreateAccount(email, emp.Firstname, (int)emp.EmployeeId);
             return new JsonResult(emp);
         }
 
@@ -79,30 +82,6 @@ namespace EmpAPI.Controllers
             {
                 throw;
             }
-        }
-
-        [Route("GetAllDepartmentNames")]
-        public JsonResult GetAllDepartmentNames()
-        {
-            //string query = @"select DepartmentName from dbo.Department";
-            //DataTable table = new DataTable();
-            //string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            //SqlDataReader myReader;
-
-            //using (SqlConnection myCon = new SqlConnection(sqlDataSource))
-            //{
-            //    myCon.Open();
-            //    using (SqlCommand myCommand = new SqlCommand(query, myCon))
-            //    {
-            //        myReader = myCommand.ExecuteReader();
-            //        table.Load(myReader);
-
-            //        myReader.Close();
-            //        myCon.Close();
-            //    }
-            //}
-
-            return new JsonResult("asdf");
         }
     }
 }

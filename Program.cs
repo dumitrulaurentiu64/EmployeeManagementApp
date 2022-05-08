@@ -5,7 +5,11 @@ using EmpAPI.Services;
 using Microsoft.Extensions.FileProviders;
 using Newtonsoft.Json.Serialization;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    ContentRootPath = Directory.GetCurrentDirectory(),
+    WebRootPath = "wwwroot"
+});
 
 var emailConfig = builder.Configuration
         .GetSection("EmailConfiguration")
@@ -27,7 +31,7 @@ builder.Services.AddControllersWithViews()
         = new DefaultContractResolver());
 
 
-builder.Services.AddSingleton<IEmailService, EmailService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 
 builder.Services.AddControllers();
@@ -46,6 +50,7 @@ if (app.Environment.IsDevelopment())
 {
 
 }
+
 app.UseCors(options => options
     .WithOrigins(new[] {"http://localhost:3000", "http://localhost:8080", "http://localhost:4200"})
     .AllowAnyHeader()
