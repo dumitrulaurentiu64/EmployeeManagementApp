@@ -26,6 +26,12 @@ namespace EmpAPI.Repository
             this.db.Execute(sql, taxDto);
         }
 
+        public void InsertTaxes(TaxDto taxDto)
+        {
+            string sql = "INSERT INTO Taxes (Tax, CAS, CASS, Pass) VALUES (@Tax, @CAS, @CASS, @Pass);";
+            this.db.Execute(sql, taxDto);
+        }
+
         public TaxDto Get()
         {
             return this.db.Query<TaxDto>("SELECT * FROM Taxes").SingleOrDefault();

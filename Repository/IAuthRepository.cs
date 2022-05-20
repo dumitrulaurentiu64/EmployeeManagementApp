@@ -9,5 +9,6 @@ namespace EmpAPI.Repository
         public User? GetUser(int userId);
         public void ChangePassword(string email, string newPassword);
         public void Register(RegisterDto dto, int parentId);
+        public void UpdateRole(int parentId, string role);
     }
 }

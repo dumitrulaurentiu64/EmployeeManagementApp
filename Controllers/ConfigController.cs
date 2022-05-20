@@ -28,5 +28,12 @@ namespace EmpAPI.Controllers
             _taxConfigRepository.UpdateTaxes(taxDto);
             return new JsonResult(taxDto);
         }
+
+        [HttpPost]
+        public JsonResult Post(TaxDto taxDto)
+        {
+            _taxConfigRepository.InsertTaxes(taxDto);
+            return new JsonResult(taxDto);
+        }
     }
 }

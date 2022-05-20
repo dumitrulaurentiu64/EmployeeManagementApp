@@ -1,0 +1,237 @@
+﻿++Solution 'EmpAPI' ‎(2 of 2 projects)
+i:{00000000-0000-0000-0000-000000000000}:EmpAPI.sln
+++EmpAPI
+i:{00000000-0000-0000-0000-000000000000}:EmpAPI
+++Connected Services 
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2324
+++Dependencies
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2323
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:>1221
+++Properties
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\properties\
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\properties\
+++launchSettings.json
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\properties\launchsettings.json
+++Controllers
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\controllers\
+++AuthController.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\controllers\authcontroller.cs
+++ConfigController.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\controllers\configcontroller.cs
+++DepartmentController.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\controllers\departmentcontroller.cs
+++EmployeeController.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\controllers\employeecontroller.cs
+++FlyerController.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\controllers\flyercontroller.cs
+++Dtos
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\dtos\
+++LoginDto.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\dtos\logindto.cs
+++PassChangeDto.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\dtos\passchangedto.cs
+++RegisterDto.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\dtos\registerdto.cs
+++TaxDto.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\dtos\taxdto.cs
+++Helpers
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\helpers\
+++JwtService.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\helpers\jwtservice.cs
+++Models
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\models\
+++Department.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\models\department.cs
+++EmailConfiguration.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\models\emailconfiguration.cs
+++Employee.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\models\employee.cs
+++Message.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\models\message.cs
+++User.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\models\user.cs
+++Photos
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\
+++275677655_1196053171165980_9041369268362248581_n.jpg
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\275677655_1196053171165980_9041369268362248581_n.jpg
+++AllFlyers.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\allflyers.png
+++anonymous.PNG
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\anonymous.png
+++CV.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\cv.png
+++dota2icon.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\dota2icon.png
+++Figura A1.drawio.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\figura a1.drawio.png
+++Figura A2.drawio.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\figura a2.drawio.png
+++mc.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\mc.png
+++MyFlyer.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\myflyer.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\myflyer.png
+++NA.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\na.png
+++patrick.PNG
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\patrick.png
+++Poza cap 1.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\poza cap 1.png
+++poza cap1 better.png
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\poza cap1 better.png
+++Poza_CI.jpg
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\poza_ci.jpg
+++profile2.webp
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\profile2.webp
+++profile4.jpg
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\profile4.jpg
+++profile5.jpg
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\profile5.jpg
+++sandy.PNG
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\photos\sandy.png
+++ReportDataSet
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\reportdataset\
+++EmployeeDataset.xsd
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\reportdataset\employeedataset.xsd
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\employeedataset.xsd
+++Reports
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\reports\
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\reports\
+++AllEmployeesFlyers.rdlc
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\reports\allemployeesflyers.rdlc
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\reports\allemployeesflyers.rdlc
+++EmployeeFlyer.rdlc
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\reports\employeeflyer.rdlc
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\reports\employeeflyer.rdlc
+++Repository
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\repository\
+++AuthRepository.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\repository\authrepository.cs
+++DepartmentRepository.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\repository\departmentrepository.cs
+++EmployeeRepository.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\repository\employeerepository.cs
+++IAuthRepository.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\repository\iauthrepository.cs
+++IDepartmentRepository.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\repository\idepartmentrepository.cs
+++IEmployeeRepository.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\repository\iemployeerepository.cs
+++ITaxConfigRepository.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\repository\itaxconfigrepository.cs
+++TaxConfigRepository.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\repository\taxconfigrepository.cs
+++Services
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\services\
+++EmailService.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\services\emailservice.cs
+++IEmailService.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\services\iemailservice.cs
+++appsettings.json
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\appsettings.json
+++Program.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\program.cs
+++SQL Scripts.txt
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\sql scripts.txt
+++No service dependencies discovered
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2325
+++Analyzers
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:analyzers
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:analyzers
+++Frameworks
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:frameworks
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:frameworks
+++Packages
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:packages
+++EmployeeDataset.Designer.cs
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\reportdataset\employeedataset.designer.cs
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\employeedataset.designer.cs
+++EmployeeDataset.xsc
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\reportdataset\employeedataset.xsc
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\employeedataset.xsc
+++EmployeeDataset.xss
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\reportdataset\employeedataset.xss
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\employeedataset.xss
+++appsettings.Development.json
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:c:\users\laurentiu\desktop\aplicatie diseratie\empapi\microsoft.netcore.app
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\microsoft.netcore.app
+++AspNetCore.Reporting (2.1.0)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2360
+++BCrypt.Net-Next (4.0.2)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2357
+++Dapper (2.0.123)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2355
+++Microsoft.AspNetCore.Cors (2.2.0)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2354
+++Microsoft.AspNetCore.Mvc.NewtonsoftJson (6.0.4)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2356
+++Microsoft.ReportingServices.ReportViewerControl.WebForms (150.1484.0)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2361
+++NETCore.MailKit (2.0.3)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2359
+++Swashbuckle.AspNetCore (6.2.3)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2353
+++System.Data.SqlClient (4.8.3)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2358
+++System.IdentityModel.Tokens.Jwt (6.15.1)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2352
+++System.Security.Permissions (6.0.0)
+i:{425c5e07-4bc4-44d1-b956-fc78ea2d2c5a}:>2351
+++EmpReports
+i:{00000000-0000-0000-0000-000000000000}:EmpReports
+++DataSources
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\properties\datasources\
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\datasources\
+++Accessibility.__MIDL_IWinTypes_0009.datasource
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\datasources\accessibility.__midl_iwintypes_0009.datasource
+++Accessibility._RemotableHandle.datasource
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\properties\datasources\accessibility._remotablehandle.datasource
+++Accessibility.CAccPropServices.datasource
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\properties\datasources\accessibility.caccpropservices.datasource
+++Accessibility.CAccPropServicesClass.datasource
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\properties\datasources\accessibility.caccpropservicesclass.datasource
+++Accessibility.IAccessible.datasource
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\properties\datasources\accessibility.iaccessible.datasource
+++Accessibility.IAccessibleHandler.datasource
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\properties\datasources\accessibility.iaccessiblehandler.datasource
+++Accessibility.IAccIdentity.datasource
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\properties\datasources\accessibility.iaccidentity.datasource
+++Accessibility.IAccPropServer.datasource
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\properties\datasources\accessibility.iaccpropserver.datasource
+++Accessibility.IAccPropServices.datasource
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\properties\datasources\accessibility.iaccpropservices.datasource
+++System.Windows.Forms.Analyzers
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\program files\dotnet\packs\microsoft.windowsdesktop.app.ref\6.0.0\analyzers\dotnet\system.windows.forms.analyzers.dll
+++System.Windows.Forms.Analyzers.CSharp
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\program files\dotnet\packs\microsoft.windowsdesktop.app.ref\6.0.0\analyzers\dotnet\cs\system.windows.forms.analyzers.csharp.dll
+++Microsoft.WindowsDesktop.App.WindowsForms
+i:{fe718c77-9be2-4096-a585-7bb89c68e3db}:c:\users\laurentiu\desktop\aplicatie diseratie\empreports\microsoft.windowsdesktop.app.windowsforms

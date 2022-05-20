@@ -44,7 +44,6 @@ namespace EmpAPI.Services
                 }
                 catch
                 {
-                    //log an error message or throw an exception or both.
                     throw;
                 }
                 finally
@@ -55,7 +54,7 @@ namespace EmpAPI.Services
             }
         }
 
-        public void CreateAccount(string email, string firstname, int parentId)
+        public void CreateAccount(string email, string firstname, int parentId, string role)
         {
             // Create Random Password
             string password = RandomString(10);
@@ -65,12 +64,13 @@ namespace EmpAPI.Services
             {
                 Email = email,
                 Firstname = firstname,
-                Password = password
+                Password = password,
+                Role = role
             };
             _authRepository.Register(registerDto, parentId);
 
             // Send Email
-            var message = new Message(new string[] { "dumitrulaurentiu32@gmail.com" }, "Account creation",
+            var message = new Message(new string[] { email }, "Account creation",
                 "Hello " + firstname + ",\n \n" +
                 "Your account was succesfully created. \n " +
                 "You can now login with the following credentials: \n" +
@@ -78,6 +78,11 @@ namespace EmpAPI.Services
                 "Password:" + registerDto.Password + "\n" +
                 "You can change your password via profile page.");
             SendEmail(message);
+        }
+
+        public void UpdateAccount(int parentId, string role)
+        {
+            _authRepository.UpdateRole(parentId, role);
         }
 
         public string RandomString(int length)

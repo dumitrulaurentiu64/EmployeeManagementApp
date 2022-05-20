@@ -6,5 +6,7 @@ namespace EmpAPI.Repository
     {
         public TaxDto Get();
         public void UpdateTaxes(TaxDto taxDto);
+
+        public void InsertTaxes(TaxDto taxDto);
     }
 }
