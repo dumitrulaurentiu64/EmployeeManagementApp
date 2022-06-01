@@ -15,7 +15,9 @@ namespace EmpAPI.Helpers
 
         public string Generate(int? id)
         {
-            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetConnectionString("EmployeeAppCon")));
+            var symmetricSecurityKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(_configuration.GetConnectionString("EmployeeAppCon"))
+                );
             var credentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256Signature);
             var header = new JwtHeader(credentials);
 

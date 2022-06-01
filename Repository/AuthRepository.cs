@@ -49,10 +49,10 @@ namespace EmpAPI.Repository
                 Firstname = dto.Firstname,
                 Email = dto.Email,
                 Password = BCrypt.Net.BCrypt.HashPassword(dto.Password),
-                User_Role = dto.Role
+                UserRole = dto.Role
             };
 
-            string sql = "INSERT INTO Users (Id, Firstname, Email, Password, User_Role) VALUES (@Id, @Firstname, @Email, @Password, @User_Role);";
+            string sql = "INSERT INTO Users (Id, Firstname, Email, Password, UserRole) VALUES (@Id, @Firstname, @Email, @Password, @UserRole);";
             this.db.Query<int>(sql, user);
         }
 
@@ -61,7 +61,7 @@ namespace EmpAPI.Repository
             var parameters = new { EmployeeId = parentId, UserRole = role };
             string sql =
                "UPDATE Users " +
-               "SET User_Role = @UserRole " +
+               "SET UserRole = @UserRole " +
                "WHERE Id = @EmployeeId";
             this.db.Execute(sql, parameters);
         }

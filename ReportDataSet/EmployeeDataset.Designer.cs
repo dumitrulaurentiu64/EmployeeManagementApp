@@ -20,9 +20,9 @@ namespace EmpAPI.ReportDataSet {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("EmployeeDataset")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class EmployeeDataset : global::System.Data.DataSet {
+    public partial class DataSet1 : global::System.Data.DataSet {
         
         private EmployeeDataTable tableEmployee;
         
@@ -30,7 +30,7 @@ namespace EmpAPI.ReportDataSet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public EmployeeDataset() {
+        public DataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace EmpAPI.ReportDataSet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected EmployeeDataset(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace EmpAPI.ReportDataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            EmployeeDataset cln = ((EmployeeDataset)(base.Clone()));
+            DataSet1 cln = ((DataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace EmpAPI.ReportDataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "EmployeeDataset";
+            this.DataSetName = "DataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/EmployeeDataset.xsd";
+            this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEmployee = new EmployeeDataTable();
@@ -225,7 +225,7 @@ namespace EmpAPI.ReportDataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            EmployeeDataset ds = new EmployeeDataset();
+            DataSet1 ds = new DataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -287,7 +287,7 @@ namespace EmpAPI.ReportDataSet {
             
             private global::System.Data.DataColumn columnPosition;
             
-            private global::System.Data.DataColumn columnDepartment;
+            private global::System.Data.DataColumn columnDepartmentId;
             
             private global::System.Data.DataColumn columnDateOfJoining;
             
@@ -380,9 +380,9 @@ namespace EmpAPI.ReportDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DepartmentColumn {
+            public global::System.Data.DataColumn DepartmentIdColumn {
                 get {
-                    return this.columnDepartment;
+                    return this.columnDepartmentId;
                 }
             }
             
@@ -523,7 +523,7 @@ namespace EmpAPI.ReportDataSet {
                         string Firstname, 
                         string Lastname, 
                         string Position, 
-                        string Department, 
+                        string DepartmentId, 
                         System.DateTime DateOfJoining, 
                         string PhotoFileName, 
                         int BaseSalary, 
@@ -542,7 +542,7 @@ namespace EmpAPI.ReportDataSet {
                         Firstname,
                         Lastname,
                         Position,
-                        Department,
+                        DepartmentId,
                         DateOfJoining,
                         PhotoFileName,
                         BaseSalary,
@@ -588,7 +588,7 @@ namespace EmpAPI.ReportDataSet {
                 this.columnFirstname = base.Columns["Firstname"];
                 this.columnLastname = base.Columns["Lastname"];
                 this.columnPosition = base.Columns["Position"];
-                this.columnDepartment = base.Columns["Department"];
+                this.columnDepartmentId = base.Columns["DepartmentId"];
                 this.columnDateOfJoining = base.Columns["DateOfJoining"];
                 this.columnPhotoFileName = base.Columns["PhotoFileName"];
                 this.columnBaseSalary = base.Columns["BaseSalary"];
@@ -614,8 +614,8 @@ namespace EmpAPI.ReportDataSet {
                 base.Columns.Add(this.columnLastname);
                 this.columnPosition = new global::System.Data.DataColumn("Position", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPosition);
-                this.columnDepartment = new global::System.Data.DataColumn("Department", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDepartment);
+                this.columnDepartmentId = new global::System.Data.DataColumn("DepartmentId", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartmentId);
                 this.columnDateOfJoining = new global::System.Data.DataColumn("DateOfJoining", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateOfJoining);
                 this.columnPhotoFileName = new global::System.Data.DataColumn("PhotoFileName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -651,7 +651,7 @@ namespace EmpAPI.ReportDataSet {
                 this.columnFirstname.MaxLength = 50;
                 this.columnLastname.MaxLength = 50;
                 this.columnPosition.MaxLength = 50;
-                this.columnDepartment.MaxLength = 50;
+                this.columnDepartmentId.MaxLength = 50;
                 this.columnPhotoFileName.MaxLength = 50;
             }
             
@@ -720,7 +720,7 @@ namespace EmpAPI.ReportDataSet {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                EmployeeDataset ds = new EmployeeDataset();
+                DataSet1 ds = new DataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -854,17 +854,17 @@ namespace EmpAPI.ReportDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Department {
+            public string DepartmentId {
                 get {
                     try {
-                        return ((string)(this[this.tableEmployee.DepartmentColumn]));
+                        return ((string)(this[this.tableEmployee.DepartmentIdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Department\' in table \'Employee\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DepartmentId\' in table \'Employee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmployee.DepartmentColumn] = value;
+                    this[this.tableEmployee.DepartmentIdColumn] = value;
                 }
             }
             
@@ -1098,14 +1098,14 @@ namespace EmpAPI.ReportDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDepartmentNull() {
-                return this.IsNull(this.tableEmployee.DepartmentColumn);
+            public bool IsDepartmentIdNull() {
+                return this.IsNull(this.tableEmployee.DepartmentIdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDepartmentNull() {
-                this[this.tableEmployee.DepartmentColumn] = global::System.Convert.DBNull;
+            public void SetDepartmentIdNull() {
+                this[this.tableEmployee.DepartmentIdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1288,7 +1288,7 @@ namespace EmpAPI.ReportDataSet {
         }
     }
 }
-namespace EmpAPI.ReportDataSet.EmployeeDatasetTableAdapters {
+namespace EmpAPI.ReportDataSet.DataSet1TableAdapters {
     
     
     /// <summary>
@@ -1416,7 +1416,7 @@ namespace EmpAPI.ReportDataSet.EmployeeDatasetTableAdapters {
             tableMapping.ColumnMappings.Add("Firstname", "Firstname");
             tableMapping.ColumnMappings.Add("Lastname", "Lastname");
             tableMapping.ColumnMappings.Add("Position", "Position");
-            tableMapping.ColumnMappings.Add("Department", "Department");
+            tableMapping.ColumnMappings.Add("DepartmentId", "DepartmentId");
             tableMapping.ColumnMappings.Add("DateOfJoining", "DateOfJoining");
             tableMapping.ColumnMappings.Add("PhotoFileName", "PhotoFileName");
             tableMapping.ColumnMappings.Add("BaseSalary", "BaseSalary");
@@ -1436,22 +1436,22 @@ namespace EmpAPI.ReportDataSet.EmployeeDatasetTableAdapters {
                 "IsNull_Firstname = 1 AND [Firstname] IS NULL) OR ([Firstname] = @Original_Firstn" +
                 "ame)) AND ((@IsNull_Lastname = 1 AND [Lastname] IS NULL) OR ([Lastname] = @Origi" +
                 "nal_Lastname)) AND ((@IsNull_Position = 1 AND [Position] IS NULL) OR ([Position]" +
-                " = @Original_Position)) AND ((@IsNull_Department = 1 AND [Department] IS NULL) O" +
-                "R ([Department] = @Original_Department)) AND ((@IsNull_DateOfJoining = 1 AND [Da" +
-                "teOfJoining] IS NULL) OR ([DateOfJoining] = @Original_DateOfJoining)) AND ((@IsN" +
-                "ull_PhotoFileName = 1 AND [PhotoFileName] IS NULL) OR ([PhotoFileName] = @Origin" +
-                "al_PhotoFileName)) AND ((@IsNull_BaseSalary = 1 AND [BaseSalary] IS NULL) OR ([B" +
-                "aseSalary] = @Original_BaseSalary)) AND ((@IsNull_Increase = 1 AND [Increase] IS" +
-                " NULL) OR ([Increase] = @Original_Increase)) AND ((@IsNull_GrossPrizes = 1 AND [" +
-                "GrossPrizes] IS NULL) OR ([GrossPrizes] = @Original_GrossPrizes)) AND ((@IsNull_" +
-                "GrossTotal = 1 AND [GrossTotal] IS NULL) OR ([GrossTotal] = @Original_GrossTotal" +
-                ")) AND ((@IsNull_TaxableGross = 1 AND [TaxableGross] IS NULL) OR ([TaxableGross]" +
-                " = @Original_TaxableGross)) AND ((@IsNull_CAS = 1 AND [CAS] IS NULL) OR ([CAS] =" +
-                " @Original_CAS)) AND ((@IsNull_CASS = 1 AND [CASS] IS NULL) OR ([CASS] = @Origin" +
-                "al_CASS)) AND ((@IsNull_Tax = 1 AND [Tax] IS NULL) OR ([Tax] = @Original_Tax)) A" +
-                "ND ((@IsNull_Deductions = 1 AND [Deductions] IS NULL) OR ([Deductions] = @Origin" +
-                "al_Deductions)) AND ((@IsNull_NetSalary = 1 AND [NetSalary] IS NULL) OR ([NetSal" +
-                "ary] = @Original_NetSalary)))";
+                " = @Original_Position)) AND ((@IsNull_DepartmentId = 1 AND [DepartmentId] IS NUL" +
+                "L) OR ([DepartmentId] = @Original_DepartmentId)) AND ((@IsNull_DateOfJoining = 1" +
+                " AND [DateOfJoining] IS NULL) OR ([DateOfJoining] = @Original_DateOfJoining)) AN" +
+                "D ((@IsNull_PhotoFileName = 1 AND [PhotoFileName] IS NULL) OR ([PhotoFileName] =" +
+                " @Original_PhotoFileName)) AND ((@IsNull_BaseSalary = 1 AND [BaseSalary] IS NULL" +
+                ") OR ([BaseSalary] = @Original_BaseSalary)) AND ((@IsNull_Increase = 1 AND [Incr" +
+                "ease] IS NULL) OR ([Increase] = @Original_Increase)) AND ((@IsNull_GrossPrizes =" +
+                " 1 AND [GrossPrizes] IS NULL) OR ([GrossPrizes] = @Original_GrossPrizes)) AND ((" +
+                "@IsNull_GrossTotal = 1 AND [GrossTotal] IS NULL) OR ([GrossTotal] = @Original_Gr" +
+                "ossTotal)) AND ((@IsNull_TaxableGross = 1 AND [TaxableGross] IS NULL) OR ([Taxab" +
+                "leGross] = @Original_TaxableGross)) AND ((@IsNull_CAS = 1 AND [CAS] IS NULL) OR " +
+                "([CAS] = @Original_CAS)) AND ((@IsNull_CASS = 1 AND [CASS] IS NULL) OR ([CASS] =" +
+                " @Original_CASS)) AND ((@IsNull_Tax = 1 AND [Tax] IS NULL) OR ([Tax] = @Original" +
+                "_Tax)) AND ((@IsNull_Deductions = 1 AND [Deductions] IS NULL) OR ([Deductions] =" +
+                " @Original_Deductions)) AND ((@IsNull_NetSalary = 1 AND [NetSalary] IS NULL) OR " +
+                "([NetSalary] = @Original_NetSalary)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Firstname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Firstname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1460,8 +1460,8 @@ namespace EmpAPI.ReportDataSet.EmployeeDatasetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Lastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Position", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Position", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Department", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Department", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Department", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Department", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepartmentId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmentId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateOfJoining", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfJoining", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateOfJoining", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfJoining", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PhotoFileName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhotoFileName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1488,13 +1488,13 @@ namespace EmpAPI.ReportDataSet.EmployeeDatasetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NetSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NetSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Employee] ([Firstname], [Lastname], [Position], [Department], [DateOfJoining], [PhotoFileName], [BaseSalary], [Increase], [GrossPrizes], [GrossTotal], [TaxableGross], [CAS], [CASS], [Tax], [Deductions], [NetSalary]) VALUES (@Firstname, @Lastname, @Position, @Department, @DateOfJoining, @PhotoFileName, @BaseSalary, @Increase, @GrossPrizes, @GrossTotal, @TaxableGross, @CAS, @CASS, @Tax, @Deductions, @NetSalary);
-SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, PhotoFileName, BaseSalary, Increase, GrossPrizes, GrossTotal, TaxableGross, CAS, CASS, Tax, Deductions, NetSalary FROM Employee WHERE (EmployeeId = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Employee] ([Firstname], [Lastname], [Position], [DepartmentId], [DateOfJoining], [PhotoFileName], [BaseSalary], [Increase], [GrossPrizes], [GrossTotal], [TaxableGross], [CAS], [CASS], [Tax], [Deductions], [NetSalary]) VALUES (@Firstname, @Lastname, @Position, @DepartmentId, @DateOfJoining, @PhotoFileName, @BaseSalary, @Increase, @GrossPrizes, @GrossTotal, @TaxableGross, @CAS, @CASS, @Tax, @Deductions, @NetSalary);
+SELECT EmployeeId, Firstname, Lastname, Position, DepartmentId, DateOfJoining, PhotoFileName, BaseSalary, Increase, GrossPrizes, GrossTotal, TaxableGross, CAS, CASS, Tax, Deductions, NetSalary FROM Employee WHERE (EmployeeId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Firstname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Firstname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Position", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Department", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Department", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartmentId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateOfJoining", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfJoining", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhotoFileName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhotoFileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BaseSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BaseSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1510,38 +1510,38 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Employee] SET [Firstname] = @Firstname, [Lastname] = @Lastname, [Po" +
-                "sition] = @Position, [Department] = @Department, [DateOfJoining] = @DateOfJoinin" +
-                "g, [PhotoFileName] = @PhotoFileName, [BaseSalary] = @BaseSalary, [Increase] = @I" +
-                "ncrease, [GrossPrizes] = @GrossPrizes, [GrossTotal] = @GrossTotal, [TaxableGross" +
-                "] = @TaxableGross, [CAS] = @CAS, [CASS] = @CASS, [Tax] = @Tax, [Deductions] = @D" +
-                "eductions, [NetSalary] = @NetSalary WHERE (([EmployeeId] = @Original_EmployeeId)" +
-                " AND ((@IsNull_Firstname = 1 AND [Firstname] IS NULL) OR ([Firstname] = @Origina" +
-                "l_Firstname)) AND ((@IsNull_Lastname = 1 AND [Lastname] IS NULL) OR ([Lastname] " +
-                "= @Original_Lastname)) AND ((@IsNull_Position = 1 AND [Position] IS NULL) OR ([P" +
-                "osition] = @Original_Position)) AND ((@IsNull_Department = 1 AND [Department] IS" +
-                " NULL) OR ([Department] = @Original_Department)) AND ((@IsNull_DateOfJoining = 1" +
-                " AND [DateOfJoining] IS NULL) OR ([DateOfJoining] = @Original_DateOfJoining)) AN" +
-                "D ((@IsNull_PhotoFileName = 1 AND [PhotoFileName] IS NULL) OR ([PhotoFileName] =" +
-                " @Original_PhotoFileName)) AND ((@IsNull_BaseSalary = 1 AND [BaseSalary] IS NULL" +
-                ") OR ([BaseSalary] = @Original_BaseSalary)) AND ((@IsNull_Increase = 1 AND [Incr" +
-                "ease] IS NULL) OR ([Increase] = @Original_Increase)) AND ((@IsNull_GrossPrizes =" +
-                " 1 AND [GrossPrizes] IS NULL) OR ([GrossPrizes] = @Original_GrossPrizes)) AND ((" +
-                "@IsNull_GrossTotal = 1 AND [GrossTotal] IS NULL) OR ([GrossTotal] = @Original_Gr" +
-                "ossTotal)) AND ((@IsNull_TaxableGross = 1 AND [TaxableGross] IS NULL) OR ([Taxab" +
-                "leGross] = @Original_TaxableGross)) AND ((@IsNull_CAS = 1 AND [CAS] IS NULL) OR " +
-                "([CAS] = @Original_CAS)) AND ((@IsNull_CASS = 1 AND [CASS] IS NULL) OR ([CASS] =" +
-                " @Original_CASS)) AND ((@IsNull_Tax = 1 AND [Tax] IS NULL) OR ([Tax] = @Original" +
-                "_Tax)) AND ((@IsNull_Deductions = 1 AND [Deductions] IS NULL) OR ([Deductions] =" +
-                " @Original_Deductions)) AND ((@IsNull_NetSalary = 1 AND [NetSalary] IS NULL) OR " +
-                "([NetSalary] = @Original_NetSalary)));\r\nSELECT EmployeeId, Firstname, Lastname, " +
-                "Position, Department, DateOfJoining, PhotoFileName, BaseSalary, Increase, GrossP" +
-                "rizes, GrossTotal, TaxableGross, CAS, CASS, Tax, Deductions, NetSalary FROM Empl" +
-                "oyee WHERE (EmployeeId = @EmployeeId)";
+                "sition] = @Position, [DepartmentId] = @DepartmentId, [DateOfJoining] = @DateOfJo" +
+                "ining, [PhotoFileName] = @PhotoFileName, [BaseSalary] = @BaseSalary, [Increase] " +
+                "= @Increase, [GrossPrizes] = @GrossPrizes, [GrossTotal] = @GrossTotal, [TaxableG" +
+                "ross] = @TaxableGross, [CAS] = @CAS, [CASS] = @CASS, [Tax] = @Tax, [Deductions] " +
+                "= @Deductions, [NetSalary] = @NetSalary WHERE (([EmployeeId] = @Original_Employe" +
+                "eId) AND ((@IsNull_Firstname = 1 AND [Firstname] IS NULL) OR ([Firstname] = @Ori" +
+                "ginal_Firstname)) AND ((@IsNull_Lastname = 1 AND [Lastname] IS NULL) OR ([Lastna" +
+                "me] = @Original_Lastname)) AND ((@IsNull_Position = 1 AND [Position] IS NULL) OR" +
+                " ([Position] = @Original_Position)) AND ((@IsNull_DepartmentId = 1 AND [Departme" +
+                "ntId] IS NULL) OR ([DepartmentId] = @Original_DepartmentId)) AND ((@IsNull_DateO" +
+                "fJoining = 1 AND [DateOfJoining] IS NULL) OR ([DateOfJoining] = @Original_DateOf" +
+                "Joining)) AND ((@IsNull_PhotoFileName = 1 AND [PhotoFileName] IS NULL) OR ([Phot" +
+                "oFileName] = @Original_PhotoFileName)) AND ((@IsNull_BaseSalary = 1 AND [BaseSal" +
+                "ary] IS NULL) OR ([BaseSalary] = @Original_BaseSalary)) AND ((@IsNull_Increase =" +
+                " 1 AND [Increase] IS NULL) OR ([Increase] = @Original_Increase)) AND ((@IsNull_G" +
+                "rossPrizes = 1 AND [GrossPrizes] IS NULL) OR ([GrossPrizes] = @Original_GrossPri" +
+                "zes)) AND ((@IsNull_GrossTotal = 1 AND [GrossTotal] IS NULL) OR ([GrossTotal] = " +
+                "@Original_GrossTotal)) AND ((@IsNull_TaxableGross = 1 AND [TaxableGross] IS NULL" +
+                ") OR ([TaxableGross] = @Original_TaxableGross)) AND ((@IsNull_CAS = 1 AND [CAS] " +
+                "IS NULL) OR ([CAS] = @Original_CAS)) AND ((@IsNull_CASS = 1 AND [CASS] IS NULL) " +
+                "OR ([CASS] = @Original_CASS)) AND ((@IsNull_Tax = 1 AND [Tax] IS NULL) OR ([Tax]" +
+                " = @Original_Tax)) AND ((@IsNull_Deductions = 1 AND [Deductions] IS NULL) OR ([D" +
+                "eductions] = @Original_Deductions)) AND ((@IsNull_NetSalary = 1 AND [NetSalary] " +
+                "IS NULL) OR ([NetSalary] = @Original_NetSalary)));\r\nSELECT EmployeeId, Firstname" +
+                ", Lastname, Position, DepartmentId, DateOfJoining, PhotoFileName, BaseSalary, In" +
+                "crease, GrossPrizes, GrossTotal, TaxableGross, CAS, CASS, Tax, Deductions, NetSa" +
+                "lary FROM Employee WHERE (EmployeeId = @EmployeeId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Firstname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Firstname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Position", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Department", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Department", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartmentId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateOfJoining", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfJoining", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhotoFileName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhotoFileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BaseSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BaseSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1561,8 +1561,8 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Lastname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Position", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Position", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Department", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Department", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Department", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Department", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepartmentId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmentId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateOfJoining", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfJoining", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateOfJoining", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfJoining", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PhotoFileName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhotoFileName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1603,9 +1603,9 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Phot" +
-                "oFileName, BaseSalary, Increase, GrossPrizes, GrossTotal, TaxableGross, CAS, CAS" +
-                "S, Tax, Deductions, NetSalary FROM dbo.Employee";
+            this._commandCollection[0].CommandText = "SELECT EmployeeId, Firstname, Lastname, Position, DepartmentId, DateOfJoining, Ph" +
+                "otoFileName, BaseSalary, Increase, GrossPrizes, GrossTotal, TaxableGross, CAS, C" +
+                "ASS, Tax, Deductions, NetSalary FROM dbo.Employee";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1613,7 +1613,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(EmployeeDataset.EmployeeDataTable dataTable) {
+        public virtual int Fill(DataSet1.EmployeeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1626,9 +1626,9 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual EmployeeDataset.EmployeeDataTable GetData() {
+        public virtual DataSet1.EmployeeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            EmployeeDataset.EmployeeDataTable dataTable = new EmployeeDataset.EmployeeDataTable();
+            DataSet1.EmployeeDataTable dataTable = new DataSet1.EmployeeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1636,14 +1636,14 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(EmployeeDataset.EmployeeDataTable dataTable) {
+        public virtual int Update(DataSet1.EmployeeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(EmployeeDataset dataSet) {
+        public virtual int Update(DataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Employee");
         }
         
@@ -1671,7 +1671,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
                     string Original_Firstname, 
                     string Original_Lastname, 
                     string Original_Position, 
-                    string Original_Department, 
+                    string Original_DepartmentId, 
                     global::System.Nullable<global::System.DateTime> Original_DateOfJoining, 
                     string Original_PhotoFileName, 
                     global::System.Nullable<int> Original_BaseSalary, 
@@ -1709,13 +1709,13 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Position));
             }
-            if ((Original_Department == null)) {
+            if ((Original_DepartmentId == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Department));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_DepartmentId));
             }
             if ((Original_DateOfJoining.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
@@ -1837,7 +1837,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
                     string Firstname, 
                     string Lastname, 
                     string Position, 
-                    string Department, 
+                    string DepartmentId, 
                     global::System.Nullable<global::System.DateTime> DateOfJoining, 
                     string PhotoFileName, 
                     global::System.Nullable<int> BaseSalary, 
@@ -1868,11 +1868,11 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Position));
             }
-            if ((Department == null)) {
+            if ((DepartmentId == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Department));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(DepartmentId));
             }
             if ((DateOfJoining.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(DateOfJoining.Value));
@@ -1970,7 +1970,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
                     string Firstname, 
                     string Lastname, 
                     string Position, 
-                    string Department, 
+                    string DepartmentId, 
                     global::System.Nullable<global::System.DateTime> DateOfJoining, 
                     string PhotoFileName, 
                     global::System.Nullable<int> BaseSalary, 
@@ -1987,7 +1987,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
                     string Original_Firstname, 
                     string Original_Lastname, 
                     string Original_Position, 
-                    string Original_Department, 
+                    string Original_DepartmentId, 
                     global::System.Nullable<global::System.DateTime> Original_DateOfJoining, 
                     string Original_PhotoFileName, 
                     global::System.Nullable<int> Original_BaseSalary, 
@@ -2019,11 +2019,11 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Position));
             }
-            if ((Department == null)) {
+            if ((DepartmentId == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Department));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(DepartmentId));
             }
             if ((DateOfJoining.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(DateOfJoining.Value));
@@ -2122,13 +2122,13 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Position));
             }
-            if ((Original_Department == null)) {
+            if ((Original_DepartmentId == null)) {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Department));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_DepartmentId));
             }
             if ((Original_DateOfJoining.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
@@ -2251,7 +2251,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
                     string Firstname, 
                     string Lastname, 
                     string Position, 
-                    string Department, 
+                    string DepartmentId, 
                     global::System.Nullable<global::System.DateTime> DateOfJoining, 
                     string PhotoFileName, 
                     global::System.Nullable<int> BaseSalary, 
@@ -2268,7 +2268,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
                     string Original_Firstname, 
                     string Original_Lastname, 
                     string Original_Position, 
-                    string Original_Department, 
+                    string Original_DepartmentId, 
                     global::System.Nullable<global::System.DateTime> Original_DateOfJoining, 
                     string Original_PhotoFileName, 
                     global::System.Nullable<int> Original_BaseSalary, 
@@ -2281,7 +2281,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
                     global::System.Nullable<int> Original_Tax, 
                     global::System.Nullable<int> Original_Deductions, 
                     global::System.Nullable<int> Original_NetSalary) {
-            return this.Update(Firstname, Lastname, Position, Department, DateOfJoining, PhotoFileName, BaseSalary, Increase, GrossPrizes, GrossTotal, TaxableGross, CAS, CASS, Tax, Deductions, NetSalary, Original_EmployeeId, Original_Firstname, Original_Lastname, Original_Position, Original_Department, Original_DateOfJoining, Original_PhotoFileName, Original_BaseSalary, Original_Increase, Original_GrossPrizes, Original_GrossTotal, Original_TaxableGross, Original_CAS, Original_CASS, Original_Tax, Original_Deductions, Original_NetSalary, Original_EmployeeId);
+            return this.Update(Firstname, Lastname, Position, DepartmentId, DateOfJoining, PhotoFileName, BaseSalary, Increase, GrossPrizes, GrossTotal, TaxableGross, CAS, CASS, Tax, Deductions, NetSalary, Original_EmployeeId, Original_Firstname, Original_Lastname, Original_Position, Original_DepartmentId, Original_DateOfJoining, Original_PhotoFileName, Original_BaseSalary, Original_Increase, Original_GrossPrizes, Original_GrossTotal, Original_TaxableGross, Original_CAS, Original_CASS, Original_Tax, Original_Deductions, Original_NetSalary, Original_EmployeeId);
         }
     }
     
@@ -2376,7 +2376,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(EmployeeDataset dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._employeeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Employee.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -2395,7 +2395,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(EmployeeDataset dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._employeeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Employee.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -2413,7 +2413,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(EmployeeDataset dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._employeeTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Employee.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -2455,7 +2455,7 @@ SELECT EmployeeId, Firstname, Lastname, Position, Department, DateOfJoining, Pho
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(EmployeeDataset dataSet) {
+        public virtual int UpdateAll(DataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

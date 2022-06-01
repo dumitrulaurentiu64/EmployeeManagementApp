@@ -6,7 +6,7 @@
         public string? Firstname { get; set; }
         public string? Lastname { get; set; }
         public string? Position { get; set; }
-        public string? Department { get; set; }
+        public string? DepartmentId { get; set; }
         public string? DateOfJoining { get; set; }
         public string? PhotoFileName { get; set; }
         public int? BaseSalary { get; set; }

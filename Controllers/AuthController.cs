@@ -13,6 +13,7 @@ namespace EmpAPI.Controllers
     [ApiController]
     public class AuthController : Controller
     {
+        private const string JWT = "jwt";
         private readonly IAuthRepository _authRepository;
         private JwtService _jwtService;
 
@@ -36,7 +37,7 @@ namespace EmpAPI.Controllers
 
             var jwt = _jwtService.Generate(user.Id);
 
-            Response.Cookies.Append("jwt", jwt, new CookieOptions
+            Response.Cookies.Append(JWT, jwt, new CookieOptions
             {
                 HttpOnly = true
             });
@@ -52,14 +53,10 @@ namespace EmpAPI.Controllers
         {
             try
             {
-                var jwt = Request.Cookies["jwt"];
-
+                var jwt = Request.Cookies[JWT];
                 var token = _jwtService.Verify(jwt);
-
                 int userId = int.Parse(token.Issuer);
-
                 User? user = _authRepository.GetUser(userId);
-
                 return Ok(user);
             }
             catch (Exception)
@@ -71,7 +68,7 @@ namespace EmpAPI.Controllers
         [HttpPost("logout")]
         public IActionResult Logout()
         {
-            Response.Cookies.Delete("jwt");
+            Response.Cookies.Delete(JWT);
 
             return Ok(new
             {

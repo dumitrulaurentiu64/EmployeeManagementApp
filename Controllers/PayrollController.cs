@@ -10,18 +10,18 @@ namespace EmpAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FlyerController : Controller
+    public class PayrollController : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly IEmployeeRepository _employeeRepository;
-        public FlyerController(IEmployeeRepository employeeRepository, IWebHostEnvironment webHostEnvironment)
+        public PayrollController(IEmployeeRepository employeeRepository, IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             _employeeRepository = employeeRepository;
         }
         [HttpGet]
-        public IActionResult Flyer()
+        public IActionResult Payroll()
         {
             var dt = new DataTable();
             List<Employee> employeeList = _employeeRepository.GetAll();
@@ -39,7 +39,7 @@ namespace EmpAPI.Controllers
             return File(result.MainStream, "application/pdf");
         }
         [HttpGet("{id}")]
-        public IActionResult Flyer(int id)
+        public IActionResult Payroll(int id)
         {
             var dt = new DataTable();
             List<Employee> emp = new List<Employee> { _employeeRepository.Find(id) };

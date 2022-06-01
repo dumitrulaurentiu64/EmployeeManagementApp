@@ -10,7 +10,7 @@ namespace EmpAPI.Models
         public string Firstname { get; set; }
         public string Email { get; set; }
 
-        public string User_Role { get; set; }
+        public string UserRole { get; set; }
         [JsonIgnore] public string Password { get; set; }    
 
     }
